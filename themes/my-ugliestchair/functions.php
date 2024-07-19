@@ -1,4 +1,8 @@
 <?php 
+
+include 'configACF.php';
+include 'configCPT-UI.php';
+
 add_theme_support('title-tag');
 add_theme_support('menus');
 
@@ -80,10 +84,10 @@ add_action('customize_register', 'mytheme_customize_register');
 function mytheme_customize_css() {
     ?>
     <style type="text/css">
-        .home__header_title {
+        .homeHeaderContainer__title_main {
             color: <?php echo get_theme_mod('header_title_color', '#000000'); ?>;
         }
-        .home__header_subtitle {
+        .homeHeaderContainer__title_subtitle {
             color: <?php echo get_theme_mod('header_subtitle_color', '#000000'); ?>;
         }
     </style>

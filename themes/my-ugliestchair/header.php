@@ -7,8 +7,8 @@
 </head>
 <body <?php body_class('body'); ?>>
 <header>
-    <div class="header-container">
-        <div class="logo">
+    <div class="headerContainer">
+        <div class="headerContainer__logo">
             <a href="<?php echo home_url(); ?>"><?php
                 if (function_exists('the_custom_logo')) {
                     the_custom_logo();
@@ -19,12 +19,12 @@
                 ?>
             </a>
         </div>
-        <nav class="navbar">
+        <nav class="headerContainer__navbar">
             <?php
                 wp_nav_menu(
                     array(
                         'theme_location' => 'header-menu',
-                        'menu_class'     => 'nav-menu',
+                        'menu_class'     => 'headerContainer__navbar_nav-menu',
                         'container'      => 'ul',
                     )
                 );
